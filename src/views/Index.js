@@ -179,9 +179,9 @@ class Index extends React.Component {
     handleData(data){
 
         let result = JSON.parse(data);
-        let current_note = this.state.note;
+        //let current_note = this.state.note;
 
-        if(this.state.current_note_id == result.id){
+        if(this.state.current_note_id === result.id){
             this.setState({note: result})
         }
     }

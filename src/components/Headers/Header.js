@@ -20,7 +20,7 @@ import axios from "axios";
 //import Modal from '../../views/Modal';
 
 // reactstrap components
-import { Card, CardBody, Container, Row, Col, Button } from "reactstrap";
+import { Card, CardBody, Container, Row, Col } from "reactstrap";
 
 const api = {
     baseUrl: `http://127.0.0.1:8000/api/wifi/`,
@@ -99,7 +99,6 @@ class Header extends React.Component {
                                 <strong>Modo: </strong>{w.mode}
                             </p>
 
-                        <Button className="" color="info" type="text" value={w.address + "-" + w.ssid + "-" + w.encryption_type}  type="submit" onClick={this.getValues}>Port Scanner</Button>
                     </CardBody>
                    </Card>
                 </Col>)}
@@ -113,12 +112,5 @@ class Header extends React.Component {
     );
   }
 }
-                            /*{ this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }*/         /*
-                                                <Modal
-                    className="modal"
-                    show={this.state.isShowing}
-                    close={this.closeModalHandler}>
-                        {w.ssid}
-                </Modal>
-                                */
+
 export default Header;
